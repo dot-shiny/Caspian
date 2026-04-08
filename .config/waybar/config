@@ -1,0 +1,20 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin-top": 5,
+    "margin-left": 10,
+    "margin-right": 10,
+    "spacing": 4,
+
+    "modules-left": ["hyprland/workspaces", "cpu", "memory", "disk", "tenperature"],
+    "modules-right": ["battery", "network", "clock"],
+
+    "hyprland/workspaces": { "format": "{name}" },
+    "cpu": { "format": "   {usage}%" },
+    "memory": { "format": "   {used}GB" }, 
+    "disk": { "format": "   {free}" }, 
+    "temperature": { "format": "   {temperatureC}C" }, 
+    "battery": { "format": "   {capacity}%" }, 
+    "network": { "format": "   {essid}" }, 
+    "clock": { "format": "   {:%H:%M}" } 
+}
