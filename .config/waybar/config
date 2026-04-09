@@ -6,15 +6,23 @@
     "margin-right": 10,
     "spacing": 4,
 
-    "modules-left": ["hyprland/workspaces", "cpu", "memory", "disk", "tenperature"],
+    "modules-left": ["hyprland/workspaces", "cpu", "memory", "disk", "temperature"],
     "modules-right": ["battery", "network", "clock"],
 
     "hyprland/workspaces": { "format": "{name}" },
-    "cpu": { "format": "   {usage}%" },
-    "memory": { "format": "   {used}GB" }, 
-    "disk": { "format": "   {free}" }, 
-    "temperature": { "format": "   {temperatureC}C" }, 
-    "battery": { "format": "   {capacity}%" }, 
-    "network": { "format": "   {essid}" }, 
-    "clock": { "format": "   {:%H:%M}" } 
+    "cpu": { "format": "<span color='black'> </span> {usage}%" },
+    "memory": { "format": "<span color='black'>  </span>{used}GB" }, 
+    "disk": { "format": "<span color='black'>󰗮</span> {free}" }, 
+    "temperature": {
+	"thermal zone": 0,
+	"hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+	"critical-threshhold": 85, 
+	"format": "<span color='black'>󰔏</span> {temperatureC}C" }, 
+    "battery": { "format": "<span color='black'>󱐌</span> {capacity}%" }, 
+    "network": {
+	"format-wifi": "<span color='black'>󰤢</span> {essid}<span color='black'>  </span>{bandwidthTotalBytes}",
+	"format-disconnected": "<span color='black'>󰤮</span>  Disconnected",
+	"interval": 1
+    }, 
+    "clock": { "format": "<span color='black'></span> {:%I:%M %p}" } 
 }
