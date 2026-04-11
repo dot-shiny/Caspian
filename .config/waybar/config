@@ -7,7 +7,12 @@
     "spacing": 4,
 
     "modules-left": ["hyprland/workspaces", "cpu", "memory", "disk", "temperature"],
-    "modules-right": ["battery", "network", "clock"],
+    "modules-right": ["custom/appmanager", "battery", "network", "clock"],
+
+    "custom/appmanager": {
+	"format": " Caspian Manager",
+	"on-click": "~/dotfiles/caspian_app_manager.sh"
+    },
 
     "hyprland/workspaces": { 
 	"format": "{name}",
