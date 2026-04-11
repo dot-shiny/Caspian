@@ -9,20 +9,45 @@
     "modules-left": ["hyprland/workspaces", "cpu", "memory", "disk", "temperature"],
     "modules-right": ["battery", "network", "clock"],
 
-    "hyprland/workspaces": { "format": "{name}" },
-    "cpu": { "format": "<span color='black'> </span> {usage}%" },
-    "memory": { "format": "<span color='black'>  </span>{used}GB" }, 
+    "hyprland/workspaces": { 
+	"format": "{name}",
+	"on-click": "hyprctl dispatch hyprexpo:expo toggle"
+    },
+
+    "cpu": { 
+	"format": "<span color='black'> </span> {usage}%", 
+	"on-click": "foot btop"
+    },
+
+    "memory": { 
+	"format": "<span color='black'>  </span>{used}GB",
+	"on-click": "foot btop" 
+    }, 
+
     "disk": { "format": "<span color='black'>󰗮</span> {free}" }, 
+
     "temperature": {
 	"thermal zone": 0,
 	"hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
 	"critical-threshhold": 85, 
-	"format": "<span color='black'>󰔏</span> {temperatureC}C" }, 
-    "battery": { "format": "<span color='black'>󱐌</span> {capacity}%" }, 
+	"format": "<span color='black'>󰔏</span> {temperatureC}C" 
+    },
+ 
+    "battery": { 
+	"format": "<span color='black'>󱐌</span> {capacity}%",
+	"on-click": "notify-send 'Battery Status' 'Currently {status}'" 
+    }, 
+
     "network": {
 	"format-wifi": "<span color='black'>󰤢</span> {essid}<span color='black'>  </span>{bandwidthTotalBytes}",
 	"format-disconnected": "<span color='black'>󰤮</span>  Disconnected",
-	"interval": 1
-    }, 
-    "clock": { "format": "<span color='black'></span> {:%I:%M %p}" } 
+	"interval": 1,
+	"on-click": "foot nmtui"
+    },
+ 
+    "clock": { 
+	"format": "<span color='black'></span> {:%I:%M %p}",
+	"on-click": "gmsimplecal" 
+   }
+ 
 }
