@@ -39,11 +39,14 @@
     },
  
     "battery": { 
+	"bat": "BAT0",
+	"adapter": "AC0",
 	"format": "<span color='black'>󱐌</span> {capacity}%",
 	"on-click": "notify-send 'Battery Status' 'Currently {status}'" 
     }, 
 
     "network": {
+	"interface": "wlan0",
 	"format-wifi": "<span color='black'>󰤢</span> {essid}<span color='black'>  </span>{bandwidthTotalBytes}",
 	"format-disconnected": "<span color='black'>󰤮</span>  Disconnected",
 	"interval": 1,
