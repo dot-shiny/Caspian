@@ -10,7 +10,7 @@
     "modules-right": ["custom/appmanager", "battery", "network", "clock"],
 
     "custom/appmanager": {
-	"format": " Caspian Manager",
+	"format": "Apps ",
 	"on-click": "~/dotfiles/caspian_app_manager.sh"
     },
 
@@ -50,7 +50,7 @@
 	"format-wifi": "<span color='black'>󰤢</span> {essid}<span color='black'>  </span>{bandwidthTotalBytes}",
 	"format-disconnected": "<span color='black'>󰤮</span>  Disconnected",
 	"interval": 1,
-	"on-click": "foot nmtui"
+	"on-click": "~/dotfiles/net_manager.sh"
     },
  
     "clock": { 
