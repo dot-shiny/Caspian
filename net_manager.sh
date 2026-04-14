@@ -1,4 +1,4 @@
-choice=$(nmcli -t -f "SSID,BARS,SECURITY" device wifi list | sed 's/:/ - /g' | wofi --dmenu --prompt "Network Manager:" --width 600 --height 500 --style ~/dotfiles/.config/wofi/style.css)
+choice=$(nmcli -t -f "SSID,BARS,SECURITY" device wifi list | sed 's/:/ - /g' | wofi --dmenu --prompt "Network Manager:" --width 600 --height 500)
 
 if [ -n "$choice" ]; then
     SSID=$(echo "$choice" | awk -F " - " '{print $1}')

@@ -50,7 +50,7 @@
 	"format-wifi": "<span color='black'>󰤢</span> {essid}<span color='black'>  </span>{bandwidthTotalBytes}",
 	"format-disconnected": "<span color='black'>󰤮</span>  Disconnected",
 	"interval": 1,
-	"on-click": "~/dotfiles/net_manager.sh"
+	"on-click": "python ~/dotfiles/net_manager_gui.py"
     },
  
     "clock": { 

@@ -1,0 +1,16 @@
+window {
+    background-color: #1a1a1a;
+    border: 0px solid #73022f;
+    border-radius: 5px;
+    font-family: "JetBrainsMono Nerd Font";
+}
+
+#input{
+    all: unset;
+    margin: 5px;
+    padding: 5px;
+    border: none;
+    color: white;
+    background-color: #73022f;
+    border-radius: 5px;
+}
