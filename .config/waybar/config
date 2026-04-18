@@ -2,6 +2,7 @@
     "exclusive": true,
     "layer": "top",
     "position": "top",
+    "passthrough": false,
     "margin-top": 0,
     "margin-left": 0,
     "margin-right": 0,
@@ -30,7 +31,10 @@
 	"on-click": "foot btop" 
     }, 
 
-    "disk": { "format": "<span color='black'>󰗮</span> {free}" }, 
+    "disk": { 
+        "format": "<span color='black'>󰗮</span> {free}",
+        "on-click": "dolphin"
+    }, 
 
     "temperature": {
 	"thermal zone": 0,
