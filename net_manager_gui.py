@@ -27,6 +27,7 @@ class Net (ctk.CTk):
 
         self.scroll = ctk.CTkScrollableFrame(self, fg_color=BG, border_color=WHINE, border_width=2)
         self.scroll.pack(padx=20, pady=20, fill="both", expand=True)
+
     def scan_wifi(self):
         for widget in self.scroll.winfo_children():
             widget.destroy()

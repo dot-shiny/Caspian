@@ -1,9 +1,10 @@
 {
+    "exclusive": true,
     "layer": "top",
     "position": "top",
-    "margin-top": 5,
-    "margin-left": 10,
-    "margin-right": 10,
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-right": 0,
     "spacing": 4,
 
     "modules-left": ["hyprland/workspaces", "cpu", "memory", "disk", "temperature"],
@@ -55,7 +56,7 @@
  
     "clock": { 
 	"format": "<span color='black'></span> {:%I:%M %p}",
-	"on-click": "gmsimplecal" 
+	"on-click": "gsimplecal" 
    }
  
 }
