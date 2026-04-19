@@ -32,3 +32,11 @@ window#waybar {
     border-radius: 5px;
 }
 
+#custom-caspian {
+    background: #73022f;
+    color: #fa0567;
+    border-radius: 5px;
+    padding: 0 20px;
+    margin: 5px 0;
+    font-weight: bold;
+}

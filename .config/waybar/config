@@ -8,6 +8,7 @@
     "margin-right": 0,
     "spacing": 4,
 
+    "modules-center": ["custom/caspian"],
     "modules-left": ["hyprland/workspaces", "cpu", "memory", "disk", "temperature"],
     "modules-right": ["custom/appmanager", "battery", "network", "clock"],
 
@@ -61,6 +62,12 @@
     "clock": { 
 	"format": "<span color='black'></span> {:%I:%M %p}",
 	"on-click": "gsimplecal" 
-   }
+    },
+    
+    "custom/caspian": {
+        "format": "    Caspian",
+        "on-click": "sleep 0.1 && python ~/.config/hypr/scripts/caspian_mouth.py",
+        "tooltip": false
+    }
  
 }
