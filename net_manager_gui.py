@@ -85,7 +85,7 @@ class Net (ctk.CTk):
 
                 os.system(f"{create_cmd} && nmcli connection up  '{ssid}' &")
             else:
-                cmd = f"nmcli device wifi connect '{ssid}' password '{pwd}'"
+                os.system = (f"nmcli wlan0 connect '{ssid}' password '{pwd}'")
 
     def disconnect(self):
         os.system("nmcli device disconnect wlan0")

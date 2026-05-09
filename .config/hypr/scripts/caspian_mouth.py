@@ -56,18 +56,25 @@ class CaspianMouth(ctk.CTk):
     def start_thought_thread(self, event):
         thought = self.entry.get().strip()
         if thought:
+            
             self.update_output("Thinking...")
             self.entry.delete(0, "end")
             threading.Thread(target=self.talk_logic, args=(thought,), daemon=True).start()
 
     def talk_logic(self, thought):
         path = os.path.expanduser("~/dotfiles/.config/hypr/scripts/caspian_brain.py")
-
         try:
-            response = subprocess.check_output(["python", path, thought], text=True, timeout=15)
-            self.after(0, lambda: self.update_output(response))
+            response = subprocess.check_output(f"python {path} '{thought}'", 
+                                             shell=True, 
+                                             text=True, 
+                                             stderr=subprocess.STDOUT, 
+                                             timeout=20)
+            self.after(0, lambda: self.update_output(response.strip()))
+        except subprocess.CalledProcessError as e:
+            self.after(0, lambda: self.update_output(f"BRAIN CRASH:\n{e.output}"))
         except Exception as e:
-            self.after(0, lambda: self.update_output(f"Error: {e}"))
+            self.after(0, lambda: self.update_output(f"SYSTEM ERROR: {e}"))
+
 
 
 if __name__ == "__main__":
