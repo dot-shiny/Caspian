@@ -1,0 +1,74 @@
+configuration {
+    modi: "window";
+    show-icons: true;
+    icon-theme: "Papirus"; /* Поменяй на свою тему иконок, если нужно */
+    window-format: "{title}";
+}
+
+* {
+    /* Цветовая палитра под твой конфиг (rgb fa0567 и 1a1a1a) */
+    bg-color:            #1a1a1aFF;
+    bg-selected:        #73022fFF;
+    border-color:       #fa0567FF;
+    text-color:         #ffffffFF;
+    text-selected:      #ffffffFF;
+    
+    font:               "JetBrainsMono Nerd Font 10";
+}
+
+window {
+    background-color:   @bg-color;
+    border:             2px;
+    border-color:       @border-color;
+    border-radius:      8px;
+    width:              70%; /* Ширина панели на экране */
+    height:             30%; /* Высота панели, чтобы поместились превью */
+    anchor:             center;
+    location:           center;
+    x-offset:           0;
+    y-offset:           0;
+}
+
+mainbox {
+    background-color:   transparent;
+    children:           [ listview ];
+    padding:            20px;
+}
+
+listview {
+    background-color:   transparent;
+    columns:            4; /* Окна будут выстраиваться в 4 аккуратные колонки-карточки */
+    lines:              1;
+    spacing:            15px;
+    layout:             vertical;
+    fixed-columns:      true;
+}
+
+element {
+    background-color:   transparent;
+    text-color:         @text-color;
+    orientation:        vertical; /* Картинка сверху, текст снизу */
+    border-radius:      6px;
+    padding:            15px;
+}
+
+element selected {
+    background-color:   @bg-selected;
+    text-color:         @text-selected;
+    border:             1px;
+    border-color:       @border-color;
+}
+
+element-icon {
+    background-color:   transparent;
+    text-color:         inherit;
+    size:               64px; /* Огромная иконка/превью по центру карточки */
+    horizontal-align:   0.5;
+}
+
+element-text {
+    background-color:   transparent;
+    text-color:         inherit;
+    horizontal-align:   0.5;
+    vertical-align:     0.5;
+}
