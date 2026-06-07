@@ -1,0 +1,56 @@
+{
+  "$schema": "https://githubusercontent.com",
+  "positionX": "right",
+  "positionY": "top",
+  "layer": "top",
+  "control-center-margin-top": 5,
+  "control-center-margin-right": 10,
+  
+  /* УРЕЗАЕМ ОКНО: Делаем его маленьким, только под иконки и ползунки */
+  "control-center-width": 300,
+  "control-center-height": 220,
+  "fit-to-screen": false,
+
+  /* Оставляем ТОЛЬКО сетку кнопок, звук и яркость */
+  "widgets": [
+    "buttons-grid",
+    "volume",
+    "backlight"
+  ],
+
+  "widget-config": {
+    "volume": {
+      "label": "   "
+    },
+    "backlight": {
+      "label": "   ",
+      "device": "intel_backlight" 
+    },
+    "buttons-grid": {
+      "actions": [
+        {
+          "label": "    Network",
+          "type": "button",
+          /* Клик по кнопке теперь вызывает умное подменю со списком сетей и вводом паролей */
+          "command": "rofi-network-manager"
+        },
+        {
+          "label": "    Bluetooth",
+          "type": "button",
+          /* Клик вызывает интерактивный список устройств */
+          "command": "rofi-bluetooth"
+        },
+        {
+          "label": "    Update",
+          "type": "button",
+          "command": "foot -e sudo pacman -Syu"
+        },
+        {
+          "label": "    Clip",
+          "type": "button",
+          "command": "cliphist wipe"
+        }
+      ]
+    }
+  }
+}

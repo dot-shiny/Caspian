@@ -1,0 +1,13 @@
+{
+  "enableBackdrop": true,
+  "backdropOpacity": 0.85,
+  "enableBlur": true,
+  "glassMode": true,
+  
+  "panelScale": 1.5,
+  "workspaceScale": 1.5,
+  "windowScale": 1.5,  
+  "scale": 2.0,
+
+  "colorSource": "default"
+}

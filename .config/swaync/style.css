@@ -1,0 +1,42 @@
+@define-color bg-color #1a1a1a;
+@define-color border-color #fa0567;
+@define-color accent-color #73022f;
+@define-color text-color #ffffff;
+
+/* Главное всплывающее окно под вейбаром */
+.control-center {
+    background: @bg-color;
+    border: 2px solid @border-color;
+    border-radius: 8px;
+    color: @text-color;
+    padding: 10px;
+}
+
+/* Ползунки громкости и яркости */
+scale trough {
+    background-color: #333333;
+    border-radius: 5px;
+    min-height: 8px;
+}
+scale slider {
+    background-color: @border-color;
+    border-radius: 50%;
+    min-width: 14px;
+    min-height: 14px;
+}
+scale highlight {
+    background-color: @accent-color;
+    border-radius: 5px;
+}
+
+/* Кнопки быстрых настроек (Wi-Fi, Bluetooth и т.д.) */
+.widget-buttons-grid button {
+    background: #252525;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    color: @text-color;
+}
+.widget-buttons-grid button:checked {
+    background: @accent-color;
+    border-color: @border-color;
+}

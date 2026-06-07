@@ -12,7 +12,14 @@
 
     "modules-center": ["custom/caspian"],
     "modules-left": ["hyprland/workspaces", "cpu", "memory", "disk", "temperature"],
-    "modules-right": ["custom/appmanager", "battery", "network", "clock"],
+    "modules-right": ["custom/appmanager", "battery", "network", "clock", "custom/notification"],
+
+    "custom/notification": {
+        "tooltip": false,
+        "format": "<span color='black'></span>",
+        "on-click": "qs ipc -c ~/dotfiles/.config/quickshell/control_center call controlCenter toggle",
+        "escape": true
+    },
 
     "custom/appmanager": {
 	"format": "Apps ",
